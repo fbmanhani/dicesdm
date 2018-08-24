@@ -20,7 +20,9 @@
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/nro_dados" />
+        android:baselineAligned="false"
+        android:entries="@array/nro_dados"
+        android:textAlignment="center" />
 
     <TextView
         android:layout_width="match_parent"
@@ -43,17 +45,26 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal" />
 
-    <ImageView
-        android:id="@+id/resultadoImageView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:contentDescription="Imagem Resultado"
-        app:srcCompat="@android:color/transparent" />
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/resultado2ImageView"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        app:srcCompat="@android:color/transparent" />
+        <ImageView
+            android:id="@+id/resultadoImageView"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagem Resultado"
+            app:srcCompat="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/resultado2ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_weight="1"
+            app:srcCompat="@android:color/transparent" />
+    </LinearLayout>
 
 </LinearLayout>
